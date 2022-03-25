@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.Home {
+  height: 100vh;
+  width: 100vw;
+  padding: 5% 0%;
+}
+
+#home-subtitle {
+  margin-top: 6%;
+}
+
+#home-button {
+  margin: 5% auto;
+}
+
+#home-loader-container {
+  display: inline-block;
+  margin-top: 15%;
+}

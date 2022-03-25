@@ -38,9 +38,11 @@ contract Market {
   event Cancel(address seller, address token, uint256 tokenId);
 
   uint256 private _listingId = 0;
-  mapping(uint256 => Listing) public _listings;
+  mapping(uint256 => Listing) public listings;
 
-  //   mapping(address => Listing) public ownerToToken;
+  function getListing(uint256 _id) external view returns (Listing memory) {
+    return listings[_id];
+  }
 
   function listToken(
     address _token,
@@ -57,13 +59,13 @@ contract Market {
       ListingStatus.Active
     );
 
-    _listings[_listingId++] = listing;
+    listings[_listingId++] = listing;
 
     emit Listed(msg.sender, _token, _id, _price, _listingId);
   }
 
   function buyToken(uint256 _id) external payable {
-    Listing storage listing = _listings[_id];
+    Listing storage listing = listings[_id];
 
     require(listing.status == ListingStatus.Active, "Listing must be active");
     require(msg.sender != listing.seller, "Cannot buy your own listing");
@@ -87,7 +89,7 @@ contract Market {
   }
 
   function cancel(uint256 _id) public {
-    Listing storage listing = _listings[_id];
+    Listing storage listing = listings[_id];
 
     require(listing.status == ListingStatus.Active, "Listing is not active");
     require(
