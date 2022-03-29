@@ -10,26 +10,24 @@ const Home = () => {
   const [connected, setConnected] = useState();
   const [loading, setLoading] = useState(true);
 
-  //   useEffect(() => {
-  //     const setUpWeb3 = async () => {
-  //       const providerOptions = {
-  //         /* See Provider Options Section */
-  //       };
+  const setUpWeb3 = async () => {
+    const providerOptions = {
+      /* See Provider Options Section */
+    };
 
-  //       const web3Modal = new Web3Modal({
-  //         network: "rinkeby",
-  //         cacheProvider: true,
-  //         providerOptions,
-  //       });
+    const web3Modal = new Web3Modal({
+      network: "rinkeby", // TODO: Find real network option
+      cacheProvider: true,
+      providerOptions,
+    });
 
-  //       const instance = await web3Modal.connect();
+    const instance = await web3Modal.connect();
 
-  //       const provider = new ethers.providers.Web3Provider(instance);
-  //       const signer = provider.getSigner();
-  //     };
-
-  //     setUpWeb3().catch(console.error);
-  //   }, []);
+    const provider = new ethers.providers.Web3Provider(instance);
+    setProvider(provider);
+    const signer = provider.getSigner();
+    setConnected(true);
+  };
 
   useEffect(() => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -72,6 +70,7 @@ const Home = () => {
             text="Connect"
             theme="primary"
             type="button"
+            onClick={setUpWeb3}
           />
         </>
       ) : (

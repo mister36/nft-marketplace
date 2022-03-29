@@ -1,0 +1,65 @@
+NFT contract: 0x58ef2a822024447663bae30de6c13d6b330be9d8
+Market contract: 0xa547199d42984a2a57f2b7bbfef637341af785fd
+
+[
+  {
+    "path": "ipfs10.json",
+    "hash": "QmdY61pQYcVBjbRV3yqSK33z9rgqu3iWq1hFcPEpCmdB6C",
+    "size": 205
+  },
+  {
+    "path": "ipfs2.json",
+    "hash": "QmNsQKmGoqdwdyjhV2NmPgpeU4rtdZKiD9eiJhjRGPsGiD",
+    "size": 174
+  },
+  {
+    "path": "ipfs9.json",
+    "hash": "QmXb5usMuWFx7d2nJUbAeK61pdKVK4BGruVa8qpgaZS2vH",
+    "size": 159
+  },
+  {
+    "path": "ipfs1.json",
+    "hash": "QmcCjtSnXxw3fwQ33qxTYsNXVKmjKNYrzkEKX81xJqi7Qe",
+    "size": 157
+  },
+  {
+    "path": "ipfs12.json",
+    "hash": "QmUX13GzbBPETAMxt3t2WqVkfmMLFJwegmw73EzYBExyyi",
+    "size": 172
+  },
+  {
+    "path": "ipfs11.json",
+    "hash": "QmaWLB9VgXQgALUU5jtN5ZKBD6tyiQECFDHKPm38sExzFD",
+    "size": 199
+  },
+  {
+    "path": "ipfs7.json",
+    "hash": "QmdMBp7cBZotkQyHtGLhPvMv5sD3g4WtMZoX17onJpnfJ3",
+    "size": 243
+  },
+  {
+    "path": "ipfs4.json",
+    "hash": "QmP4R55gL3YFQoc8f1YJ251oXffvdM8sBpZBRcGwtyQnxC",
+    "size": 173
+  },
+  {
+    "path": "ipfs3.json",
+    "hash": "QmfLUYeywm2KcCMCWTfSMKBZjCngFGbTLNpJkjpSVnmVfX",
+    "size": 189
+  },
+  {
+    "path": "ipfs5.json",
+    "hash": "QmXikSuSPjhD2uytb9PW1yMXhDaxovqgtnx8zibbuBiTos",
+    "size": 178
+  },
+  {
+    "path": "ipfs6.json",
+    "hash": "QmfCSoPW2y1j4nhkx9E6BqkKsKmAvWPh3QKBc2Zxmzr2u1",
+    "size": 188
+  },
+  {
+    "path": "ipfs8.json",
+    "hash": "QmXp9FAgderAgmKQvRCPXjmQbzsNRXcefxHV1usXiXmPxN",
+    "size": 251
+  }
+]
