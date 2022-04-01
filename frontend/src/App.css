@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .Home {
@@ -19,4 +20,16 @@
 #home-loader-container {
   display: inline-block;
   margin-top: 15%;
+}
+
+.new-listing-modal-text {
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+#create-listing-button {
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 5% auto; */
 }

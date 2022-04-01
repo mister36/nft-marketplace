@@ -8,7 +8,7 @@ contract Market {
     address token;
     address seller;
     uint256 tokenId;
-    uint256 price;
+    uint256 price; // in wei
     ListingStatus status;
   }
 

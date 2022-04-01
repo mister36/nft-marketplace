@@ -3,6 +3,8 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import { Typography, Button, Loading } from "web3uikit";
 
+import ConnectedHome from "./ConnectedHome";
+
 import "../App.css";
 
 const Home = () => {
@@ -33,22 +35,28 @@ const Home = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
 
     const isMetaMaskConnected = async () => {
-      return (await provider.listAccounts()) > 1;
+      const accounts = await provider.listAccounts();
+      return accounts.length > 0;
     };
 
-    isMetaMaskConnected().then((connected) => {
-      setLoading(false);
-      if (connected) {
-        setConnected(true);
-      } else {
-        setConnected(false);
-      }
-    });
+    isMetaMaskConnected()
+      .then((connected) => {
+        setLoading(false);
+        if (connected) {
+          setProvider(provider);
+          setConnected(true);
+        }
+      })
+      .catch((err) => {
+        console.log("THIS IS ERROR", err);
+      });
   }, []);
 
   return (
     <div className="Home">
-      <Typography variant="h1">Welcome to the NFT Marketplace!</Typography>
+      <Typography variant="h1" color={"white"}>
+        Welcome to the NFT Marketplace!
+      </Typography>
       {loading ? (
         <div id="home-loader-container">
           <Loading
@@ -61,7 +69,7 @@ const Home = () => {
       ) : null}
       {!connected ? (
         <>
-          <Typography variant="subtitle1" id="home-subtitle">
+          <Typography variant="subtitle1" id="home-subtitle" color={"white"}>
             Connect to your Metamask account to start shopping.
           </Typography>
           <Button
@@ -74,7 +82,7 @@ const Home = () => {
           />
         </>
       ) : (
-        <div>Connected</div>
+        <ConnectedHome provider={provider} />
       )}
     </div>
   );
